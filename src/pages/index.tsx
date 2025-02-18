@@ -86,7 +86,7 @@ export default function Home() {
         <Link
           href="https://maps.app.goo.gl/LDYf7bW1FHvPmsHc8"
           target="_blank"
-          className="font-[emoji] font-semibold text-[#f3f2e1] px-4 py-[0.2rem] rounded-full bg-[#ddb072]  hover:bg-[#ddb072]  text-sm md:text-xl  transition-all duration-300 ease-in-out text-center"
+          className="font-[emoji] font-semibold text-[#f3f2e1] px-4 py-[0.2rem] rounded-full bg-[#ddb072]  hover:bg-[#ddb072]  text-[0.65rem] md:text-xl  transition-all duration-300 ease-in-out text-center"
           style={{
             position: "absolute",
             bottom: "32.3%",
@@ -95,7 +95,7 @@ export default function Home() {
             transform: "translateX(-50%)",
           }}
         >
-          Location
+          LOCATION
         </Link>
       </div>
       <div
@@ -114,7 +114,7 @@ export default function Home() {
           hidden={started}
         />
         <button
-          className={`font-montserrat px-4 py-1 rounded-full bg-[#b5c7a0]  hover:bg-[#d8e2b5] text-black text-xs font-medium md:text-lg my-5 transition-all duration-300 ease-in-out
+          className={`font-montserrat px-3 py-1 rounded-full bg-[#b5c7a0]  hover:bg-[#d8e2b5] text-black text-xs font-medium md:text-lg my-5 transition-all duration-300 ease-in-out
         border-[1px] border-[#bec5b6] 
   `}
           style={{
