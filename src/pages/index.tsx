@@ -50,10 +50,10 @@ export default function Home() {
         <Link
           href="/https://maps.app.goo.gl/LDYf7bW1FHvPmsHc8"
           target="_blank"
-          className="font-[emoji] font-semibold text-[#f3f2e1] px-4 py-1 rounded-full bg-[#ddb072]  hover:bg-[#d8e2b5]  text-xs md:text-xl  transition-all duration-300 ease-in-out text-center"
+          className="font-[emoji] font-semibold text-[#f3f2e1] px-4 py-[0.2rem] rounded-full bg-[#ddb072]  hover:bg-[#d8e2b5]  text-sm md:text-xl  transition-all duration-300 ease-in-out text-center"
           style={{
             position: "absolute",
-            bottom: "32.2%",
+            bottom: "32.3%",
             left: "50%",
             width: "22%",
             transform: "translateX(-50%)",
@@ -71,7 +71,7 @@ export default function Home() {
           src="/output-onlinepngtools (11).png"
           alt="Next.js logo"
           layout="responsive"
-          className="max-w-[481px]"
+          className="max-w-[481px] !w-[80%]"
           width={3000} // Original image width
           height={11491} // Original image height
           priority
@@ -80,10 +80,7 @@ export default function Home() {
         <button
           className={`font-montserrat px-4 py-1 rounded-full bg-[#b5c7a0]  hover:bg-[#d8e2b5] text-black text-xs font-medium md:text-lg my-5 transition-all duration-300 ease-in-out
         border-[1px] border-[#bec5b6] 
-        hover:border-t-[#819a64] 
-        hover:border-r-[#819a64] 
-        hover:border-b-[#819a64] 
-        hover:border-l-[#819a64]  `}
+  `}
           style={{
             boxShadow:
               "0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
