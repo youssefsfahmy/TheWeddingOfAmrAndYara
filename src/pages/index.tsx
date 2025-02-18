@@ -1,40 +1,102 @@
 import Image from "next/image";
 import Head from "@/components/head";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+// import Link from "next/link";
 
 export default function Home() {
-  return (
-    <div className="flex flex-col justify-center items-center h-screen w-full bg-[#fefcf1] ">
-      <Head />
-      <div className="relative w-11/12 max-w-md md:max-w-lg lg:max-w-2xl h-[45vh] md:h-[55vh] lg:h-[65vh]">
-        <Image
-          src="/LandingPage-Without Button (1).jpg"
-          alt="Next.js logo"
-          fill
-          className="object-contain"
-          priority
-        />
-      </div>
-      {/* Apply the Gotham-Light font to the button */}
+  const audioRef = useRef<any>(null);
+  const [started, setStarted] = useState(false);
 
-      <Link
-        className={`font-montserrat px-4 py-1 rounded-full bg-[#b5c7a0]  hover:bg-[#d8e2b5] text-black text-xs font-medium md:text-lg my-5 transition-all duration-300 ease-in-out
-        border-t-[1px] border-t-[#819a64] 
-        border-r-[1px] border-r-[#819a64] 
-        border-b-[1px] border-b-[#819a64] 
-        border-l-[1px] border-l-[#819a64] 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const audio = new Audio("/Ash - Acoustic Live (mp3cut.net).mp3");
+      audioRef.current = audio;
+
+      // Attempt to play the audio automatically
+      const playAudio = () => {
+        audio
+          .play()
+          .then(() => console.log("Autoplay started"))
+          .catch(() => console.log("Autoplay blocked"));
+
+        audio.loop = true;
+      };
+
+      // If autoplay is blocked, wait for user interaction
+      document.addEventListener("click", playAudio, { once: true });
+
+      return () => {
+        document.removeEventListener("click", playAudio);
+        audio.pause();
+      };
+    }
+  }, []);
+  return (
+    <div className="flex flex-col justify-center items-center  w-full bg-[#f6efe4]  ">
+      <Head />
+
+      <div className="w-full bg-[#f6efe4] flex items-center justify-center snap-start relative max-w-screen-sm ">
+        <Image
+          src="/Yara and Amr's Wedding Invitation-1.png"
+          alt="Next.js logo"
+          layout="responsive"
+          width={3000} // Original image width
+          height={11491} // Original image height
+          priority
+          hidden={!started}
+        />
+        <Link
+          href="/https://maps.app.goo.gl/LDYf7bW1FHvPmsHc8"
+          target="_blank"
+          className="font-[emoji] font-semibold text-[#f3f2e1] px-4 py-1 rounded-full bg-[#ddb072]  hover:bg-[#d8e2b5]  text-xs md:text-xl  transition-all duration-300 ease-in-out text-center"
+          style={{
+            position: "absolute",
+            bottom: "32.2%",
+            left: "50%",
+            width: "22%",
+            transform: "translateX(-50%)",
+          }}
+        >
+          Location
+        </Link>
+      </div>
+      <div
+        className={`w-full bg-[#f6efe4] flex flex-col items-center justify-center snap-start relative max-w-screen-sm ${
+          started ? "hidden" : "h-screen max-h-screen"
+        }`}
+      >
+        <Image
+          src="/output-onlinepngtools (11).png"
+          alt="Next.js logo"
+          layout="responsive"
+          className="max-w-[481px]"
+          width={3000} // Original image width
+          height={11491} // Original image height
+          priority
+          hidden={started}
+        />
+        <button
+          className={`font-montserrat px-4 py-1 rounded-full bg-[#b5c7a0]  hover:bg-[#d8e2b5] text-black text-xs font-medium md:text-lg my-5 transition-all duration-300 ease-in-out
+        border-[1px] border-[#bec5b6] 
         hover:border-t-[#819a64] 
         hover:border-r-[#819a64] 
         hover:border-b-[#819a64] 
         hover:border-l-[#819a64]  `}
-        href={"/main"}
-        style={{
-          boxShadow:
-            "0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
-        }}
-      >
-        CLICK FOR DETAILS
-      </Link>
+          style={{
+            boxShadow:
+              "0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+          }}
+          onClick={() => {
+            audioRef.current.play();
+            setStarted(true);
+          }}
+          hidden={started}
+        >
+          CLICK FOR DETAILS
+        </button>
+      </div>
+      {/* Apply the Gotham-Light font to the button */}
     </div>
   );
 }
