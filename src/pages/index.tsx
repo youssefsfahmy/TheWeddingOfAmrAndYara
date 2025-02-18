@@ -5,6 +5,7 @@ import Link from "next/link";
 // import Link from "next/link";
 
 export default function Home() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const audioRef = useRef<any>(null);
   const [started, setStarted] = useState(false);
 
@@ -88,7 +89,7 @@ export default function Home() {
               "0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
           }}
           onClick={() => {
-            audioRef.current.play();
+            audioRef?.current?.play();
             setStarted(true);
           }}
           hidden={started}
