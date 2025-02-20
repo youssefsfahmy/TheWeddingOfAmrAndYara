@@ -11,7 +11,7 @@ function Index() {
         className="flex justify-center w-full h-[140px] max-w-screen-sm mb-[10px] shadow-md"
       >
         <Image
-          src="/formbanner.jpeg"
+          src="/back3.jpeg"
           alt="Next.js logo"
           layout="responsive"
           width={2358} // Original image width
@@ -21,7 +21,7 @@ function Index() {
         />
       </Link>
       <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdUnOUG6DNycOC84FSuEPlVhgQHOWTnPsEfhsfYjmlVxZoSPA/viewform?embedded=true"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfI2b1hwcD_V4JCM30GImZgd7cY7vyUM90ysinlNbgN3SzzCA/viewform?embedded=true"
         frameBorder="0"
         marginHeight={0}
         marginWidth={0}

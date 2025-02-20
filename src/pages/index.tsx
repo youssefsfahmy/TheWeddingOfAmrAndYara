@@ -75,7 +75,7 @@ export default function Home() {
 
       <div className="w-full bg-[#f6efe4] flex items-center justify-center snap-start relative max-w-screen-sm ">
         <Image
-          src="/Yara and Amr's Wedding Invitation-1.png"
+          src="/Yara and Amr's Wedding Invitation (3)-1.png"
           alt="Next.js logo"
           layout="responsive"
           width={3000} // Original image width
@@ -86,16 +86,43 @@ export default function Home() {
         <Link
           href="https://maps.app.goo.gl/LDYf7bW1FHvPmsHc8"
           target="_blank"
-          className="font-[emoji] font-semibold text-[#f3f2e1] px-4 py-[0.2rem] rounded-full bg-[#ddb072]  hover:bg-[#ddb072]  text-[0.65rem] md:text-xl  transition-all duration-300 ease-in-out text-center"
+          className="font-[emoji] font-semibold text-[#876e5e] px-6 py-[0.25rem] rounded-full bg-[#dfb374]  hover:bg-[#ddb072]  text-[0.65rem] md:text-xl  transition-all duration-300 ease-in-out text-center"
           style={{
             position: "absolute",
-            bottom: "32.3%",
+            bottom: "29%",
             left: "50%",
-            width: "22%",
+            // width: "22%",
             transform: "translateX(-50%)",
           }}
         >
-          LOCATION
+          CLICK FOR LOCATION
+        </Link>
+        <Link
+          href="/form"
+          className="font-[emoji] font-semibold text-[#876e5e] px-6 py-[0.2rem] rounded-full bg-[#dfb374]  hover:bg-[#ddb072]  text-[0.65rem] md:text-xl  transition-all duration-300 ease-in-out text-center"
+          style={{
+            position: "absolute",
+            bottom: "24.36%",
+            left: "50%",
+            // width: "22%",
+            transform: "translateX(-50%)",
+          }}
+        >
+          CLICK TO RSVP
+        </Link>
+        <Link
+          href="https://mywishlists.io/wishs/view/004RcDuGDWe5RfkXLLNNckEM"
+          target="_blank"
+          className="font-[emoji] font-semibold text-[#876e5e] px-6 py-[0.2rem] rounded-full bg-[#dfb374]  hover:bg-[#ddb072]  text-[0.65rem] md:text-xl  transition-all duration-300 ease-in-out text-center w-max"
+          style={{
+            position: "absolute",
+            bottom: "8.1%",
+            left: "50%",
+            // width: "22%",
+            transform: "translateX(-50%)",
+          }}
+        >
+          CLICK FOR OUR GIFT REGISTRY
         </Link>
       </div>
       <div
